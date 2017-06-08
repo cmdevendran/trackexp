@@ -1,0 +1,41 @@
+<!--
+  Generated template for the ExpenseFormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar colour="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>ExpenseForm</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list no-lines>
+
+    <form [formGroup]="expenseForm" (ngSubmit)="logForm()">
+
+  <ion-item>
+    <ion-label floating>Title</ion-label>
+    <ion-input type="text" formControlName="title"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>DATE</ion-label>
+  <ion-datetime displayFormat="MM/DD/YYYY" pickerFormat="YYYY-MM-DD" formControlName="description" ></ion-datetime>
+</ion-item>
+
+
+
+
+<button ion-button type="submit" >Submit</button>
+</form>
+
+     </ion-list>
+</ion-content>

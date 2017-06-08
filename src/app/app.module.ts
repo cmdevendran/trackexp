@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import {CategoryPage} from '../pages/category/category';
+import {ExpenseFormPage} from '../pages/expense-form/expense-form';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,6 +21,8 @@ import { firebaseConfig } from '../environment';
     HomePage,
     ListPage,
     CategoryPage,
+    ExpenseFormPage,
+
 
   ],
   imports: [
@@ -33,7 +36,8 @@ import { firebaseConfig } from '../environment';
     MyApp,
     HomePage,
     ListPage,
-    CategoryPage
+    CategoryPage,
+    ExpenseFormPage
   ],
   providers: [
     StatusBar,
