@@ -20,16 +20,38 @@
   <ion-list no-lines>
 
     <form [formGroup]="expenseForm" (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-label floating>DATE</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" pickerFormat="DD-MM-YYYY" formControlName="expDate" ></ion-datetime>
+    </ion-item>
 
-  <ion-item>
-    <ion-label floating>Title</ion-label>
-    <ion-input type="text" formControlName="title"></ion-input>
-  </ion-item>
 
-  <ion-item>
-    <ion-label floating>DATE</ion-label>
-  <ion-datetime displayFormat="MM/DD/YYYY" pickerFormat="YYYY-MM-DD" formControlName="description" ></ion-datetime>
-</ion-item>
+
+<ion-item>
+    <ion-list>
+      <ion-item *ngFor="let cat of cats | async"  >
+        {{cat.title}}
+
+      </ion-item>
+    </ion-list>
+        </ion-item>
+
+
+
+
+      <ion-item>
+        <ion-label floating>Amount</ion-label>
+        <ion-input type="number" formControlName="amount"></ion-input>
+      </ion-item>
+
+      <ion-item>
+
+        <ion-input placeholder="Remarks" type="text" formControlName="remark"></ion-input>
+      </ion-item>
+
+
+
+
 
 
 

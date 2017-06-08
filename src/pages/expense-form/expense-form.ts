@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 /**
  * Generated class for the ExpenseFormPage page.
  *
@@ -14,13 +14,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: 'expense-form.html',
 })
 export class ExpenseFormPage {
+cats: FirebaseListObservable<any[]>;
 
 expenseForm: FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
+  constructor(public db: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
+this.cats = db.list('/category');
   this.expenseForm = this.formBuilder.group({
-        title: ['', Validators.required],
-        description: [''],
+
+        expDate: ['', Validators.required],
+  amount: ['', Validators.required],
+    scat: [ , Validators.required],
+      remark: [''],
+
+
+
       });
 
   }
