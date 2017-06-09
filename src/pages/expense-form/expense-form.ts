@@ -15,16 +15,21 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 })
 export class ExpenseFormPage {
 cats: FirebaseListObservable<any[]>;
+expenses: FirebaseListObservable<any[]>;
+
+
 
 expenseForm: FormGroup;
 
   constructor(public db: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
 this.cats = db.list('/category');
+this.expenses = db.list('/expense');
+
   this.expenseForm = this.formBuilder.group({
 
         expDate: ['', Validators.required],
   amount: ['', Validators.required],
-    scat: [ , Validators.required],
+    scat: ['' , Validators.required],
       remark: [''],
 
 
@@ -34,7 +39,14 @@ this.cats = db.list('/category');
   }
 logForm(){
 console.log(this.expenseForm.value);
+this.expenses.push({
+  ExpenseDate: this.expenseForm.value.expDate,
+  ExpenseAmount: this.expenseForm.value.amount,
+  category: this.expenseForm.value.scat,
+  remark: this.expenseForm.value.remark,
+});
 }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ExpenseFormPage');
   }
