@@ -15,6 +15,7 @@ import {ExpenseFormPage} from '../expense-form/expense-form';
   templateUrl: 'report.html',
 })
 export class ReportPage {
+passpage: boolean=false;
 
 expenses: FirebaseListObservable<any[]>;
 
@@ -26,8 +27,11 @@ this.expenses = db.list('/expense');
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReportPage');
   }
-  showExpense(exp: string){
-   this.navCtrl.push(ExpenseFormPage);
+//showExpense(category, expense.amount. expense.date, expense.remark, expense.$key)){
+    showExpense(expense){
+console.log("category : " + expense.category);
+  this.passpage=true;
+   this.navCtrl.push(ExpenseFormPage, {passpage: true} );
 
   }
 
