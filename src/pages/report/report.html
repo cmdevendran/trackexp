@@ -5,11 +5,12 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>report</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Reports</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
@@ -26,7 +27,7 @@
         }}
 
 <!-- <ion-icon item-right name="remove-circle" (click)="showExpense(expense.category, expense.amount. expense.date, expense.remark, expense.$key)"></ion-icon> -->
-<ion-icon item-right name="remove-circle" (click)="showExpense(expense)"></ion-icon>
+<ion-icon item-right name="remove-circle" (click)="showExpense(expense.category, expense.ExpenseAmount, expense.ExpenseDate, expense.remark, expense.$key, expense)"></ion-icon>
 
       </ion-item>
     </ion-list>

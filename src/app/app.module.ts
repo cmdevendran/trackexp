@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { ReportPage } from '../pages/report/report';
 import {CategoryPage} from '../pages/category/category';
 import {ExpenseFormPage} from '../pages/expense-form/expense-form';
+import {UpdateformPage} from '../pages/updateform/updateform';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,6 +25,7 @@ import { firebaseConfig } from '../environment';
     CategoryPage,
     ExpenseFormPage,
     ReportPage,
+    UpdateformPage,
 
 
   ],
@@ -40,7 +42,8 @@ import { firebaseConfig } from '../environment';
     ListPage,
     CategoryPage,
     ExpenseFormPage,
-    ReportPage
+    ReportPage,
+    UpdateformPage
   ],
   providers: [
     StatusBar,
