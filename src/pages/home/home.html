@@ -6,13 +6,23 @@
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
+<ion-content>
+<form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+    <ion-row>
+        <ion-item>
+            <ion-label for="email"></ion-label>
+            <ion-input type="email" value="" placeholder="Email" formControlName="email"></ion-input>
+        </ion-item>
+    </ion-row>
+    <ion-row>
+        <ion-item>
+            <ion-label for="password"></ion-label>
+            <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+        </ion-item>
+    </ion-row>
+      <ion-row>
+          <button (click)="login()" ion-button block>Log in</button>
+      </ion-row>
+  </form>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>
