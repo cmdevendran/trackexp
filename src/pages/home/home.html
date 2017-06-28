@@ -3,26 +3,53 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Profile</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content>
-<form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
-    <ion-row>
-        <ion-item>
-            <ion-label for="email"></ion-label>
-            <ion-input type="email" value="" placeholder="Email" formControlName="email"></ion-input>
-        </ion-item>
+<ion-content padding>
+  <div *ngIf="auth.currentUser">
+    <ion-row align-items: center>
+
+      <ion-avatar>
+        <img src="assets/images/userlogo.jpg" alt="User Image">
+
+      </ion-avatar>
+
+
     </ion-row>
     <ion-row>
-        <ion-item>
-            <ion-label for="password"></ion-label>
-            <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
-        </ion-item>
+      Welcome {{auth.currentUser}}
     </ion-row>
+
+    <button *ngIf="auth.currentUser" (click)="logout()" ion-button block>Log out</button>
+
+  </div>
+
+
+
+  <div *ngIf="!auth.currentUser">
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
       <ion-row>
-          <button (click)="login()" ion-button block>Log in</button>
+        <ion-item>
+          <ion-label for="email"></ion-label>
+          <ion-input type="email" value="" placeholder="Email" formControlName="email"></ion-input>
+        </ion-item>
       </ion-row>
-  </form>
+      <ion-row>
+        <ion-item>
+          <ion-label for="password"></ion-label>
+          <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <button (click)="login()" ion-button block>Log in</button>
+      </ion-row>
+    </form>
+
+  </div>
+
+
+
 
 </ion-content>

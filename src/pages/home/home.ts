@@ -30,8 +30,13 @@ loginForm: FormGroup;
 
           var credentials = ({email: this.email.value, password: this.password.value}); //Added next lines
           this.auth.loginWithEmail(credentials).subscribe(data => {
-          
+
+
           });
         }
+    }
+
+    logout(): void{
+    this.auth.logout();
     }
 }

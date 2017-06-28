@@ -6,6 +6,7 @@ import { Observable } from "rxjs/Observable";
 export class AuthProvider {
 
   constructor(private af: AngularFireAuth) {
+
   }
 
   loginWithEmail(credentials) {
@@ -14,9 +15,21 @@ export class AuthProvider {
       ).then((authData) => {
         console.log("Authentication Data : " +authData);
         observer.next(authData);
+
       }).catch((error) => {
+
         observer.error("Error in login : "  + error);
       });
     });
   }
+
+  logout() {
+      this.af.auth.signOut();
+    }
+
+  get currentUser():string{
+
+   return this.af.auth.currentUser?this.af.auth.currentUser.email:null;
+ }
+
 }
