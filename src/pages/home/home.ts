@@ -18,7 +18,7 @@ loginForm: FormGroup;
   constructor(public navCtrl: NavController, private fb: FormBuilder, public auth: AuthProvider) {
   this.loginForm = this.fb.group({
             'email': ['', Validators.compose([Validators.required, Validators.pattern(/[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)])],
-            'password': ['', Validators.compose([Validators.required, Validators.minLength(1)])]
+            'password': ['', Validators.compose([Validators.required, Validators.minLength(6)])]
         });
 
         this.email = this.loginForm.controls['email'];
