@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController} from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import {ExpenseFormPage} from '../expense-form/expense-form';
 import {UpdateformPage} from '../updateform/updateform';
 import { AuthProvider } from '../../providers/auth/auth';
 

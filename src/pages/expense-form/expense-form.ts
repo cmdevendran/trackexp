@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, Nav, NavController, NavParams, ModalController, ViewController, App } from 'ionic-angular';
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { IonicPage, NavController, NavParams, ModalController, ViewController, App } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import {HomePage} from '../home/home';
 import { AuthProvider } from '../../providers/auth/auth';
@@ -69,7 +69,7 @@ this.cats = db.list('/'+this.auth.myauthdata+'/category');
         remark: this.expenseForm.value.remark,
       });
       this.navCtrl.push(ExpenseFormPage);
-      //this.viewCtrl.dismiss().catch(() => console.log('view was not dismissed'));
+      //this.viewCtrl.dismiss().catch(() => console.log('view was not dismissed yet'));
         //this.navCtrl.pop().catch(() => console.log('pop was not dismissed'));
       this.navCtrl.setRoot(ExpenseFormPage);
 
