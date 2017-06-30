@@ -1,0 +1,259 @@
+{
+	"3IPl4br8JFTWQaWK7RjfyE4ESdR2": {
+		"category": {
+			"-Km0hY2PHOwtRMDEv6JL": {
+				"title": "PERSONAL CARE"
+			},
+			"-Km0habKqS6RCOLfjVMb": {
+				"title": "GROCERY"
+			},
+			"-Km0hc9ELMKrQDzBzy_y": {
+				"title": "TRANSPORT"
+			},
+			"-Km0hw6eMjIFh_guYb5b": {
+				"title": "GIFT"
+			},
+			"-Km0mfmj72oXJsd5ioHe": {
+				"title": "CAR"
+			},
+			"-Kmks4dwrIvn_F8CUGu8": {
+				"title": "JEWELLERY"
+			}
+		},
+		"expense": {
+			"-Km9hw4Yua1YDEBQ5fCX": {
+				"ExpenseAmount": "99040",
+				"ExpenseDate": "2017-01-01",
+				"category": "GROCERY",
+				"remark": "testing"
+			},
+			"-Km9oLSSZGAIaIGNSUrl": {
+				"ExpenseAmount": "065",
+				"ExpenseDate": "2017-02-01",
+				"category": "GIFT",
+				"remark": "testing 2"
+			},
+			"-KmZdHg05PejMWobfGXy": {
+				"ExpenseAmount": "590",
+				"ExpenseDate": "01/01/2017",
+				"category": "GROCERY",
+				"remark": ""
+			},
+			"-Km_Q6QTkA4Yd1ehUbAH": {
+				"ExpenseAmount": "590",
+				"ExpenseDate": "2017-02-01",
+				"category": "CAR",
+				"remark": "testing"
+			},
+			"-KmdQOBUUWvsPNCYRUTh": {
+				"ExpenseAmount": "55",
+				"ExpenseDate": "2017-01-01",
+				"category": "PERSONAL CARE",
+				"remark": "soap"
+			},
+			"-KmdUpViXKW1x7foeG39": {
+				"ExpenseAmount": "77",
+				"ExpenseDate": "2017-03-01",
+				"category": "TRANSPORT",
+				"remark": ""
+			},
+			"-Kmk8aYOfXGnq1bo39wU": {
+				"ExpenseAmount": "5567",
+				"ExpenseDate": "2016-01-01",
+				"category": "GIFT",
+				"remark": "some other testing"
+			},
+			"-KmkDjI1iKIIKC8pC9vb": {
+				"ExpenseAmount": "8888",
+				"ExpenseDate": "2017-02-01",
+				"category": "CAR",
+				"remark": "test"
+			},
+			"-KmkExOr0WUDN1oor9pN": {
+				"ExpenseAmount": "554",
+				"ExpenseDate": "2017-01-04",
+				"category": "PERSONAL CARE",
+				"remark": "test"
+			},
+			"-Kmkq7T6BTJjSBRfiQ9I": {
+				"ExpenseAmount": "33",
+				"ExpenseDate": "2017-01-01",
+				"category": "CAR",
+				"remark": "test"
+			},
+			"-Kmkr7ezg7E2MX68UuSx": {
+				"ExpenseAmount": "600",
+				"ExpenseDate": "2017-06-01",
+				"category": "PERSONAL CARE",
+				"remark": ""
+			},
+			"-KmkrF73kqaFcw6t9fRh": {
+				"ExpenseAmount": "300",
+				"ExpenseDate": "2017-01-01",
+				"category": "PERSONAL CARE",
+				"remark": ""
+			},
+			"-KmkuqBbRORbh_VtgFL0": {
+				"ExpenseAmount": "66",
+				"ExpenseDate": "2017-01-02",
+				"category": "TRANSPORT",
+				"remark": ""
+			},
+			"-KmkxHzZDbDKZlJ9_5g7": {
+				"ExpenseAmount": "66",
+				"ExpenseDate": "2017-01-01",
+				"category": "TRANSPORT",
+				"remark": ""
+			},
+			"-KmkxlwVg8J5VRxR8_2p": {
+				"ExpenseAmount": "",
+				"ExpenseDate": "",
+				"category": "GIFT",
+				"remark": ""
+			},
+			"-KmkzzXs9JTaNcVaJYU6": {
+				"ExpenseAmount": "66",
+				"ExpenseDate": "2017-01-01",
+				"category": "PERSONAL CARE",
+				"remark": ""
+			},
+			"-Kml-8bqMj0bjiuZ867P": {
+				"ExpenseAmount": "",
+				"ExpenseDate": "",
+				"category": "",
+				"remark": ""
+			},
+			"-KmpJ-P3UUscKPvS_VVQ": {
+				"ExpenseAmount": "44",
+				"ExpenseDate": "2017-01-02",
+				"category": "GROCERY",
+				"remark": ""
+			},
+			"-KmzAwQ4F6w_MnHnvHAW": {
+				"ExpenseAmount": "55",
+				"ExpenseDate": "2017-01-01",
+				"category": "GIFT",
+				"remark": ""
+			},
+			"-KmzSyIHip3l1N-L0-Hc": {
+				"ExpenseAmount": "",
+				"ExpenseDate": "",
+				"category": "",
+				"remark": ""
+			},
+			"-KngRy1CTDn7QExDjBB0": {
+				"ExpenseAmount": "",
+				"ExpenseDate": "",
+				"category": "",
+				"remark": ""
+			},
+			"-Knh6u37j_NlBYEDju5z": {
+				"ExpenseAmount": "44",
+				"ExpenseDate": "2017-06-01",
+				"category": "TRANSPORT",
+				"remark": "test"
+			},
+			"-Knh7WjQeboGvvRUahAF": {
+				"ExpenseAmount": "99",
+				"ExpenseDate": "2017-01-05",
+				"category": "GROCERY",
+				"remark": "99"
+			},
+			"-KnhPflBsDeTgvZh_3S9": {
+				"ExpenseAmount": "44",
+				"ExpenseDate": "2017-01-01",
+				"category": "GROCERY",
+				"remark": "44"
+			},
+			"-KnhPjEdL0QA8MqVotWV": {
+				"ExpenseAmount": "44",
+				"ExpenseDate": "2017-01-01",
+				"category": "GROCERY",
+				"remark": "44"
+			},
+			"-KnhPxVo_-sLNfW-fDdu": {
+				"ExpenseAmount": "44",
+				"ExpenseDate": "2017-01-01",
+				"category": "GROCERY",
+				"remark": "44"
+			},
+			"-KnhQW5It-AlvAql5iP-": {
+				"ExpenseAmount": "55",
+				"ExpenseDate": "2017-01-01",
+				"category": "TRANSPORT",
+				"remark": "55"
+			},
+			"-KnhWR1ZphEJ2zLQ6Ltp": {
+				"ExpenseAmount": "00",
+				"ExpenseDate": "2017-01-01",
+				"category": "GROCERY",
+				"remark": "00"
+			},
+			"-KnhWfaMyHBTP9Do-L_k": {
+				"ExpenseAmount": "55",
+				"ExpenseDate": "2017-01-01",
+				"category": "GIFT",
+				"remark": ""
+			},
+			"-KnhYNQeOpmjTHtZUFQ7": {
+				"ExpenseAmount": "44",
+				"ExpenseDate": "2017-01-01",
+				"category": "CAR",
+				"remark": ""
+			},
+			"-KnhYhcaI48eLS9d6MCL": {
+				"ExpenseAmount": "44",
+				"ExpenseDate": "2017-01-01",
+				"category": "JEWELLERY",
+				"remark": "44"
+			},
+			"-Knh_6Tmd1_jEaPIwxh5": {
+				"ExpenseAmount": "55",
+				"ExpenseDate": "2017-01-01",
+				"category": "TRANSPORT",
+				"remark": "55"
+			},
+			"-KnhbGFRx4m1XKRlxmxv": {
+				"ExpenseAmount": "99",
+				"ExpenseDate": "2017-01-01",
+				"category": "JEWELLERY",
+				"remark": ""
+			},
+			"-KnhcQ0qGi_c4_3-CUwL": {
+				"ExpenseAmount": "55",
+				"ExpenseDate": "2017-01-01",
+				"category": "JEWELLERY",
+				"remark": ""
+			},
+			"-Knhcmq3JVpldRyWaIfw": {
+				"ExpenseAmount": "990",
+				"ExpenseDate": "2017-01-01",
+				"category": "GIFT",
+				"remark": ""
+			},
+			"-Knhg2Ie_svlsGWTjIHJ": {
+				"ExpenseAmount": "11",
+				"ExpenseDate": "2017-01-01",
+				"category": "GIFT",
+				"remark": ""
+			},
+			"-KnhhPY6jHH7QHMl3qK6": {
+				"ExpenseAmount": "77",
+				"ExpenseDate": "2017-01-01",
+				"category": "GIFT",
+				"remark": ""
+			}
+		}
+	},
+	"users": {
+		"3IPl4br8JFTWQaWK7RjfyE4ESdR2": {
+			"profile": {
+				"active": "true",
+				"blocked": "false",
+				"email": "cmdevendran@gmail.com",
+				"name": "Devendran",
+				"role": "5"
+			}
+		}
+	}
+}

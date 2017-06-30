@@ -4,7 +4,7 @@ import { Observable } from "rxjs/Observable";
 
 @Injectable()
 export class AuthProvider {
-
+myauthdata : string;
   constructor(private af: AngularFireAuth) {
 
   }
@@ -13,7 +13,8 @@ export class AuthProvider {
     return Observable.create(observer => {
       this.af.auth.signInWithEmailAndPassword(credentials.email, credentials.password
       ).then((authData) => {
-        console.log("Authentication Data : " +authData);
+        this.myauthdata = this.af.auth.currentUser.uid;
+        console.log("Authentication Data : " + this.myauthdata);
         observer.next(authData);
 
       }).catch((error) => {
@@ -26,6 +27,9 @@ export class AuthProvider {
   logout() {
       this.af.auth.signOut();
     }
+
+
+
 
   get currentUser():string{
 

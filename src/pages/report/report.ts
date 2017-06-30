@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ModalController} from 'ionic-angul
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import {ExpenseFormPage} from '../expense-form/expense-form';
 import {UpdateformPage} from '../updateform/updateform';
+import { AuthProvider } from '../../providers/auth/auth';
 
 /**
  * Generated class for the ReportPage page.
@@ -22,8 +23,10 @@ expenses: FirebaseListObservable<any[]>;
 public people: FirebaseListObservable<any>;
 
 
-constructor(public db: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, public mdlCtrl: ModalController) {
-this.expenses = db.list('/expense');
+constructor(public db: AngularFireDatabase, public navCtrl: NavController, public auth: AuthProvider,  public navParams: NavParams, public mdlCtrl: ModalController) {
+  this.expenses = db.list('/'+this.auth.myauthdata+'/expense');
+
+
 
 
 
@@ -58,7 +61,7 @@ this.navCtrl.push(UpdateformPage, object
 
    getAllChilds(key: string){
    console.log("within getAllchilds");
-this.people = this.db.list('expense',{
+this.people = this.db.list('/'+this.auth.myauthdata+'/expense',{
 query:{
 orderByChild : 'category',
 equalTo: key

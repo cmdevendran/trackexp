@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, ActionSheetController} from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AuthProvider } from '../../providers/auth/auth';
 
 
 /**
@@ -17,8 +18,13 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 export class CategoryPage {
 cats: FirebaseListObservable<any[]>;
 
-  constructor(public db: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private actionSheetCtrl: ActionSheetController) {
-this.cats = db.list('/category')
+  constructor(public db: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private actionSheetCtrl: ActionSheetController, public auth: AuthProvider) {
+this.cats = db.list('/'+this.auth.myauthdata+'/category');
+console.log('/'+this.auth.myauthdata+'/category');
+  }
+
+  getCategories():FirebaseListObservable<any>{
+  return this.cats;
   }
 
   ionViewDidLoad() {

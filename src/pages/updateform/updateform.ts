@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import {ReportPage} from '../report/report';
+import { AuthProvider } from '../../providers/auth/auth';
 
 
 /**
@@ -25,9 +26,10 @@ expenses: FirebaseListObservable<any[]>;
 
 expenseForm: FormGroup;
 
-constructor(public db: AngularFireDatabase,public viewCtrl: ViewController,  public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
-this.cats = db.list('/category');
-this.expenses = db.list('/expense');
+constructor(public auth: AuthProvider, public db: AngularFireDatabase,public viewCtrl: ViewController,  public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
+this.cats = db.list('/'+this.auth.myauthdata+'/category');
+
+this.expenses = db.list('/'+this.auth.myauthdata+'/expense');
 
 this.expenseForm = this.formBuilder.group({
 

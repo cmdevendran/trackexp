@@ -3,12 +3,13 @@ import { IonicPage, Nav, NavController, NavParams, ModalController, ViewControll
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import {HomePage} from '../home/home';
+import { AuthProvider } from '../../providers/auth/auth';
 
 /**
 * Generated class for the ExpenseFormPage page.
 *
 * See http://ionicframework.com/docs/components/#navigation for more info
-* on Ionic pages and navigation.
+* on Ionic import { AuthProvider } from '../../providers/auth/auth';pages and navigation.
 */
 @IonicPage()
 @Component({
@@ -18,7 +19,7 @@ import {HomePage} from '../home/home';
 })
 export class ExpenseFormPage {
   rootPage: any = HomePage;
-  cats: FirebaseListObservable<any[]>;
+  cats:  FirebaseListObservable<any[]>;
   expenses: FirebaseListObservable<any[]>;
 
 
@@ -28,9 +29,10 @@ export class ExpenseFormPage {
 
 
   constructor(public db: AngularFireDatabase, public appCtrl: App, public viewCtrl: ViewController, public modalCtrl: ModalController,
-    public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
-    this.cats = db.list('/category');
-    this.expenses = db.list('/expense');
+    public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public auth: AuthProvider) {
+this.cats = db.list('/'+this.auth.myauthdata+'/category');
+
+    this.expenses = db.list('/'+this.auth.myauthdata+'/expense');
 
 
     console.log("pass : before entering : " + this.navParams.get("page"));
