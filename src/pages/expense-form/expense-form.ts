@@ -25,14 +25,22 @@ export class ExpenseFormPage {
 
   pass: boolean = false;
   expenseForm: FormGroup;
+  authstate : string;
 
 
 
   constructor(public db: AngularFireDatabase, public appCtrl: App, public viewCtrl: ViewController, public modalCtrl: ModalController,
     public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder, public auth: AuthProvider) {
-this.cats = db.list('/'+this.auth.myauthdata+'/category');
+console.log("Entering ExpenseFormPage....");
+console.log(this.auth.currentUser);
+    this.authstate=this.auth.checkState();
+    console.log("Authstate within expense form : "+this.authstate);
 
-    this.expenses = db.list('/'+this.auth.myauthdata+'/expense');
+//this.cats = db.list('/'+this.auth.myauthdata+'/category');
+this.cats = db.list('/'+this.auth.currentUser+'/category');
+
+  //  this.expenses = db.list('/'+this.auth.myauthdata+'/expense');
+    this.expenses = db.list('/'+this.auth.currentUser+'/expense');
 
 
     console.log("pass : before entering : " + this.navParams.get("page"));

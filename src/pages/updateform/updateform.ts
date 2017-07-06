@@ -27,9 +27,9 @@ expenses: FirebaseListObservable<any[]>;
 expenseForm: FormGroup;
 
 constructor(public auth: AuthProvider, public db: AngularFireDatabase,public viewCtrl: ViewController,  public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
-this.cats = db.list('/'+this.auth.myauthdata+'/category');
+this.cats = db.list('/'+this.auth.currentUser+'/category');
 
-this.expenses = db.list('/'+this.auth.myauthdata+'/expense');
+this.expenses = db.list('/'+this.auth.currentUser+'/expense');
 
 this.expenseForm = this.formBuilder.group({
 

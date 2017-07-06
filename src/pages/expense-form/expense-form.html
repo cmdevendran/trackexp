@@ -20,11 +20,12 @@
   <ion-list no-lines>
 
     <form [formGroup]="expenseForm" (ngSubmit)="logForm()">
-      <ion-item>
-        <ion-label floating>Date</ion-label>
-      <ion-datetime displayFormat="MM/DD/YYYY" pickerFormat="DD-MM-YYYY" formControlName="expDate" ></ion-datetime>
-    </ion-item>
 
+
+    <ion-item>
+      <ion-label floating>Date</ion-label>
+    <ion-input type="date" displayFormat="DD/MM/YYYY" pickerFormat="DD-MM-YYYY" formControlName="expDate" ></ion-input>
+  </ion-item>
 
 
 <ion-item>

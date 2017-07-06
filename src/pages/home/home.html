@@ -7,7 +7,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <div *ngIf="auth.currentUser">
+  <div *ngIf="auth.currentUserName">
     <ion-row align-items: center>
 
       <ion-avatar>
@@ -18,16 +18,21 @@
 
     </ion-row>
     <ion-row>
-      Welcome {{auth.currentUser}}
+      Welcome {{auth.currentUserName}}
     </ion-row>
 
-    <button *ngIf="auth.currentUser" (click)="logout()" ion-button block>Log out</button>
+    <button *ngIf="auth.currentUserName" (click)="logout()" ion-button block>Log out</button>
+
+
+
 
   </div>
 
 
 
-  <div *ngIf="!auth.currentUser">
+
+
+  <div *ngIf="!auth.currentUserName">
 
     <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
       <ion-row>
@@ -43,11 +48,31 @@
         </ion-item>
       </ion-row>
       <ion-row>
-        <button (click)="login()" ion-button block>Log in</button>
+        <button (click)="login()" ion-button block>Log in</button>   <button (click)="signUp()" ion-button block>Sign In</button>
       </ion-row>
+<div >
+      <ion-row >
+        <ion-item  >
+          <ion-label text-wrap color=red color="primary" >
+    {{anyErrors}}
+    </ion-label>
+  </ion-item>
+      </ion-row>
+    </div>
     </form>
 
+
   </div>
+
+
+
+
+
+
+
+
+
+
 
 
 

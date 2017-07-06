@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+
 
 import { ReportPage } from '../pages/report/report';
 import {CategoryPage} from '../pages/category/category';
@@ -26,7 +26,6 @@ import { AuthProvider } from '../providers/auth/auth';
     MyApp,
     HomePage,
 
-    ListPage,
     CategoryPage,
     ExpenseFormPage,
     ReportPage,
@@ -45,7 +44,7 @@ import { AuthProvider } from '../providers/auth/auth';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
+
     CategoryPage,
     ExpenseFormPage,
     ReportPage,

@@ -23,7 +23,8 @@ public people: FirebaseListObservable<any>;
 
 
 constructor(public db: AngularFireDatabase, public navCtrl: NavController, public auth: AuthProvider,  public navParams: NavParams, public mdlCtrl: ModalController) {
-  this.expenses = db.list('/'+this.auth.myauthdata+'/expense');
+
+this.expenses = db.list('/'+this.auth.currentUser+'/expense');
 
 
 
@@ -60,7 +61,7 @@ this.navCtrl.push(UpdateformPage, object
 
    getAllChilds(key: string){
    console.log("within getAllchilds");
-this.people = this.db.list('/'+this.auth.myauthdata+'/expense',{
+this.people = this.db.list('/' +this.auth.currentUser+ '/expense',{
 query:{
 orderByChild : 'category',
 equalTo: key
